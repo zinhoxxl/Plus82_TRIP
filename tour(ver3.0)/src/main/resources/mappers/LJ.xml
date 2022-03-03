@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="LJDao">
+
+	<insert id="LJWriteDetailCom" parameterType="Command">
+		insert into command
+		values(#{c_no},com_no_seq.nextval,#{m_id},#{com_contents},com_no_seq.currval,0,0)
+	</insert>
+	
+	<select id="LJSelectOneList" parameterType="Command" resultType="Command">
+		select * from command where com_no = #{com_no} and m_id=#{m_id}
+	</select>
+	
+	<delete id="LJDeleteAllCommand" parameterType="Command">
+		delete from command
+		where com_Group = #{com_Group} and m_id = #{m_id}
+	</delete>
+	
+	<delete id="LJDeleteCommand" parameterType="Command">
+		delete from command
+		where com_no = #{com_no} and m_id = #{m_id}
+	</delete>
+	
+	<update id="LJUpdateCommand" parameterType="Command">
+		update command set
+		com_contents = #{com_contents} where com_no = #{com_no} and m_id =
+		#{m_id}
+	</update>
+
+	<select id="LJReplyProperty" parameterType="java.lang.String"
+		resultType="Command">
+		select * from command where com_no = #{com_no}
+	</select>
+	
+	<insert id="LJwriteReply" parameterType="Command">
+		insert into command
+		values(#{c_no},com_no_seq.nextval,#{m_id},#{com_contents},#{com_Group},#{com_Step}+1,#{com_Indent}+1)
+	</insert>
+
+	<insert id="LJreplyShape" parameterType="Command">
+		update command set
+		com_step = com_step+1 where com_Group = #{com_Group} and com_step >
+		#{com_Step}
+	</insert>
+
+
+
+</mapper>
