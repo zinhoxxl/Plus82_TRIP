@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<script>
+		window.onload = function(){
+		if(${result}==1){
+			alert("등록 성공!");
+			window.location.href="detail?c_no=${con1.c_no}&c_local=${con.c_local}";
+			
+		}else{
+			alert("등록 실패..")
+			window.open("about:blank", "_self").close();
+		}
+	};
+</script>
