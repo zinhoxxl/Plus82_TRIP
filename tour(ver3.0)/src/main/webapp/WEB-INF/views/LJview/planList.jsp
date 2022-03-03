@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<%-- 작성자 : 이진호  --%>
 <meta charset="UTF-8">
 <title>+82Trip</title>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

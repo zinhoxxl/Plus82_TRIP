@@ -13,7 +13,7 @@ import java.util.List;
 
 /*
  * 이진호
- * 플랜 관련 Repository
+ * 플랜 관련 Repository 
  */
 public interface LJPlanRepository extends JpaRepository<Plan, Long> {
     List<Plan> findAllByPlannerNoAndDayBetweenOrderByPlanNo(Long plannerNo, Date start,Date end);

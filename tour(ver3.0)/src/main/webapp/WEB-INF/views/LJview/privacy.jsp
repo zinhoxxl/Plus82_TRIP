@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>+82Trip</title>
 </head>
+<%-- 작성자 : 이진호  --%>
 <body>
 <%@include file="../header1.jsp" %>
 <%@include file="../header2.jsp" %>

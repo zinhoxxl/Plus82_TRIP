@@ -10,7 +10,7 @@ import com.oracle.tour.dto.PlannerDTO;
 
 /*
  * 이진호
- * 플래너 Service
+ * 플래너 Service 
  */
 public interface LJPlannerService {
     PlannerDTO insertPlanner(PlannerDTO dto) throws ParseException;

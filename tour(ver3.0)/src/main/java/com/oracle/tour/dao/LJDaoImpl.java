@@ -11,7 +11,7 @@ import com.oracle.tour.dto.Command;
 
 /*
  * 이진호
- * 컨텐츠 댓글 관련 LJDaoImpl
+ * 컨텐츠 댓글 관련 LJDaoImpl 
  * -- MyBatis 
  * mapper 연결
  * */

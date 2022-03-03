@@ -9,7 +9,7 @@ import java.util.Date;
 
 /*
  * 이진호
- * 플랜 Entity
+ * 플랜 Entity 
  */
 
 @Entity

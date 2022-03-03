@@ -9,7 +9,7 @@ import com.oracle.tour.dto.PlannerDTO;
 
 /*
  * 이진호
- * 플랜 Service
+ * 플랜 Service 
  */
 public interface LJPlanService {
     List<PlanDTO> selectPlans(PlannerDTO planner);

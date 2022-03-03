@@ -15,7 +15,7 @@ import com.oracle.tour.service.SHService;
 
 /*
  *  이진호
- *  컨텐츠 댓글 관련 Response Controller 
+ *  컨텐츠 댓글 관련 Response Controller  
  */
 
 @RestController

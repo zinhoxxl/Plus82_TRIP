@@ -12,7 +12,7 @@ import com.oracle.tour.dto.Command;
 
 /*
  * 이진호
- * 컨텐츠 댓글 관련 LJServiceImpl
+ * 컨텐츠 댓글 관련 LJServiceImpl 
  * */
 
 @Service

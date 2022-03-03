@@ -9,6 +9,7 @@
 </style>
 </head>
 <body>
+<%-- 작성자 : 이진호  --%>
 <%@include file="../header1.jsp" %>
 <%@include file="../header2.jsp" %>
 <div class="container mt-5 mb-5">

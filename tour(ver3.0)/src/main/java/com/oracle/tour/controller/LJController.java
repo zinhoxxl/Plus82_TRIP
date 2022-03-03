@@ -34,7 +34,7 @@ import javax.servlet.http.HttpSession;
  *  이진호
  *  플래너 Controller 
  *  &
- *  footer 회사소개/이용약관/개인정보처리방침
+ *  footer 회사소개/이용약관/개인정보처리방침 
  */
 
 @Controller

@@ -12,7 +12,7 @@ import lombok.ToString;
 
 /*
  * 이진호
- * 플랜 DTO
+ * 플랜 DTO 
  */
 
 @Getter

@@ -6,7 +6,7 @@ import com.oracle.tour.dto.Command;
 
 /*
  * 이진호
- * 컨텐츠 댓글 관련 LJDao
+ * 컨텐츠 댓글 관련 LJDao 
  * */
 
 public interface LJDao {

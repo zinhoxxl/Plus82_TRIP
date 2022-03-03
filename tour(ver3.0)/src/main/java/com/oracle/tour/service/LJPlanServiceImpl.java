@@ -16,7 +16,7 @@ import java.util.*;
 
 /*
  * 이진호
- * 플랜(상세) Service
+ * 플랜(상세) Service 
  */
 @Service
 public class LJPlanServiceImpl implements LJPlanService {

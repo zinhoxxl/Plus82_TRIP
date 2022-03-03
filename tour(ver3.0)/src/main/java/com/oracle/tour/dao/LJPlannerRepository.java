@@ -11,7 +11,7 @@ import java.util.List;
 
 /*
  * 이진호
- * 플래너 관련 Repository            --> JpaRepository로 데이터 조회
+ * 플래너 관련 Repository            --> JpaRepository로 데이터 조회 
  */
 @Repository
 public interface LJPlannerRepository extends JpaRepository<Planner, Long> {

@@ -12,7 +12,7 @@ import java.util.Date;
 
 /*
  * 이진호
- * 플래너 Entity
+ * 플래너 Entity 
  */
 
 @Entity

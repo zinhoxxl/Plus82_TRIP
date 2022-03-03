@@ -7,7 +7,7 @@ import com.oracle.tour.dto.Command;
 
 /*
  * 이진호
- * 컨텐츠 댓글 관련 LJService
+ * 컨텐츠 댓글 관련 LJService 
  * */
 public interface LJService {
 

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 </head>
+<%-- 작성자 : 이진호  --%>
 <%@include file="../bootStrap.jsp"%>
 <title>+82Trip</title>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
