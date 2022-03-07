@@ -232,14 +232,14 @@ public class LJPlanServiceImpl implements LJPlanService {
     public List<Date> getDiffDays(Date fromDate, Date toDate){
     	                    // .getInstance() : 최초에 할당된 하나의 메모리를 계속 쓰는 방식
         Calendar cal = Calendar.getInstance(); // 캘린더 생성
-        cal.setTime(fromDate);
+        cal.setTime(fromDate); // 시작일을 캘린더에 저장
         int count = getDiffDayCount(fromDate,toDate);
         // 시작일부터
-        cal.add(Calendar.DATE, -1); // 하루 전 
+        cal.add(Calendar.DATE, -1); // 하루 빼기 : 이렇게 해야 배열(내가 선택한 day만큼의 범위가 나옴, 안그러면 내가 시작한 날부터 +1된 날짜가 반복분의 시작점이 됨
         // 데이터 저장
         List result = new ArrayList();
-        for(int i = 0;i<=count;i++){
-            cal.add(Calendar.DATE, 1);
+        for(int i=0; i<=count; i++){
+            cal.add(Calendar.DATE, 1); // 하루씩 저장 : 반복문 실행전에 위에서 -1 해놨기때문에 +1하면 일정만큼이 정확하게 저장
             result.add(cal.getTime());
         }
         return result;
