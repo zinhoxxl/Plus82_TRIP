@@ -18,7 +18,7 @@ public interface LJPlannerService {
     PlannerDTO selectPlanner(Long plannerNo);
     void deletePlanner(Long plannerNo);
 
-    default Planner dtoToEntity(PlannerDTO dto) throws ParseException {
+    default Planner dtoToEntity(PlannerDTO dto) throws ParseException {  // java8부터 default로 interface 내에서 메소드 실행이 가능
         Planner entity = null;
 
         if(dto.getPlannerNo() != null){     // 플래너 수정할 경우 플래너 번호도 같이 전달
