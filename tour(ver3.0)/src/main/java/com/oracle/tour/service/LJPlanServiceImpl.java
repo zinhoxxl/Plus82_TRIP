@@ -146,7 +146,7 @@ public class LJPlanServiceImpl implements LJPlanService {
                 }else{                                        // DB에 이미 저장된 plan일 경우
                     PlanDTO plan = PlanDTO.builder()
                             .plannerNo(planner_no)
-                            .planNo(planNo.get(i))
+                            .planNo(planNo.get(i)) // 기존 planNo(플랜번호) 가져오기
                             .id(id)
                             .day(days.get(i))
                             .name(place.get(i))
@@ -156,7 +156,7 @@ public class LJPlanServiceImpl implements LJPlanService {
                             .build();
                     plans.add(plan);
                 }
-            }else{
+            }else{ // intro가 있을 경우
                 if(planNo.size() ==0){                  // DB에 이미 저장된 plan이 아닐경우
                     PlanDTO plan = PlanDTO.builder()
                             .plannerNo(planner_no)
@@ -171,7 +171,7 @@ public class LJPlanServiceImpl implements LJPlanService {
                 }else{                                      // DB에 이미 저장된 plan일 경우
                     PlanDTO plan = PlanDTO.builder()
                             .plannerNo(planner_no)
-                            .planNo(planNo.get(i))
+                            .planNo(planNo.get(i)) // 기존 planNo(플랜번호) 가져오기
                             .id(id)
                             .day(days.get(i))
                             .name(place.get(i))
