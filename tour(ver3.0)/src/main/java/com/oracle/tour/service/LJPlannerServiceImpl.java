@@ -25,9 +25,9 @@ public class LJPlannerServiceImpl implements LJPlannerService {
     @Override
     public PlannerDTO insertPlanner(PlannerDTO dto) throws ParseException {
         Planner entity = dtoToEntity(dto); // plannerService interface의 default 메소드 dtoToEntity 실행
-        Planner planner = repository.save(entity);
-        PlannerDTO plannerDTO = entityToDto(planner);
-        return plannerDTO;
+        Planner planner = repository.save(entity); // planner_tbl 저장후 entity 값을 planner entity에 저장
+        PlannerDTO plannerDTO = entityToDto(planner); // plannerService interface의 default 메소드 entityToDto 실행 -> plannerDto에 저장
+        return plannerDTO; // dto return
     }
 
     
