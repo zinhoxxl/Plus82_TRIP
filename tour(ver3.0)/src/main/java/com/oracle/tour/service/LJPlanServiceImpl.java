@@ -25,10 +25,12 @@ public class LJPlanServiceImpl implements LJPlanService {
 
     public void insertPlan(List<PlanDTO> planDTOS){
         List<Plan> plans = new ArrayList<Plan>();
-        for(PlanDTO dto : planDTOS){
+           		  // 변수 : 배열 변수
+        for(PlanDTO dto : planDTOS){ // 향상된 for문은 배열 변수만 사용 가능 하기 때문에 이를 활용
             plans.add(dtoToEntity(dto));
         }
-        repository.saveAll(plans); }
+        repository.saveAll(plans); 
+    }
 
     
     
@@ -98,7 +100,7 @@ public class LJPlanServiceImpl implements LJPlanService {
                         .id(id)
                         .day(days.get(i))
                         .name(place.get(i))
-                        .intro(" ")
+                        .intro(" ") // intro 가 null
                         .x(X.get(i))
                         .y(Y.get(i))
                         .build();
@@ -110,7 +112,7 @@ public class LJPlanServiceImpl implements LJPlanService {
                         .id(id)
                         .day(days.get(i))
                         .name(place.get(i))
-                        .intro(place_intro.get(i))
+                        .intro(place_intro.get(i)) // intro 값이 존재
                         .x(X.get(i))
                         .y(Y.get(i))
                         .build();
@@ -285,7 +287,7 @@ public class LJPlanServiceImpl implements LJPlanService {
     public List<Float> changeFloatList(List<String> data){
         List<Float> result = new ArrayList<Float>();
         for(int i=0;i<data.size();i++){
-            Float floatNum = Float.parseFloat(data.get(i));
+            Float floatNum = Float.parseFloat(data.get(i)); // parseFloat => 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환
             result.add(floatNum);
         }
         return result;
