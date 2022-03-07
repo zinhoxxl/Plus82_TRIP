@@ -246,7 +246,7 @@ public class LJPlanServiceImpl implements LJPlanService {
     public List<Date> changeDateList(List<String> dates, List<String> times) throws ParseException {
         List<Date> result = new ArrayList<Date>();
 
-        for(int i=0;i<dates.size();i++){                           
+        for(int i=0;i<dates.size();i++){         // SimpleDateFormat 은 String -> Date 로 변환 해주는 메소드                   
             SimpleDateFormat recvSimpleFormat = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
             SimpleDateFormat tranSimpleFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
             Date dateDate = recvSimpleFormat.parse(dates.get(i));
