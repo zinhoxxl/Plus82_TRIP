@@ -20,8 +20,8 @@
         	/* day1,2,... 클릭시 선택유무에 따른 컬러 변경 */
             $('.planI-daybox').click(function(e) {
                 e.preventDefault();
-                $('.planI-daybox').css("background-color","#FFC478");
-                $(this).css("background-color","#ffffff");
+                $('.planI-daybox').css("background-color","#FFC478"); // 클릭후에 선택외의 days 컬러 
+                $(this).css("background-color","#ffffff"); // 클릭후에 선택한 day의 컬러
             });
 
             $(".planI-header__button--sumbit").click(function () {
