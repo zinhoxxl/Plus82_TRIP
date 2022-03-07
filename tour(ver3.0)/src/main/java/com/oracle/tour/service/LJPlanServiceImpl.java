@@ -230,11 +230,12 @@ public class LJPlanServiceImpl implements LJPlanService {
         return (int)((toDate.getTime() - fromDate.getTime()) / 1000 / 60 / 60 / 24);
     }
     public List<Date> getDiffDays(Date fromDate, Date toDate){
-        Calendar cal = Calendar.getInstance();
+    	                    // .getInstance() : 최초에 할당된 하나의 메모리를 계속 쓰는 방식
+        Calendar cal = Calendar.getInstance(); // 캘린더 생성
         cal.setTime(fromDate);
         int count = getDiffDayCount(fromDate,toDate);
         // 시작일부터
-        cal.add(Calendar.DATE, -1);
+        cal.add(Calendar.DATE, -1); // 하루 전 
         // 데이터 저장
         List result = new ArrayList();
         for(int i = 0;i<=count;i++){
