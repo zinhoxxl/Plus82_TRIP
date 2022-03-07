@@ -140,6 +140,7 @@ public class LJController {
         planService.insertPlan(plans); // 업데이트 된 플랜내용을 저장 처리 작업
         logger.info("plans.size -> ", plans.size());
 
+        // update완료후 dto에서 plannerNo를 가지고 플랜상세페이지에서 view 띄우기
         return "planD?plannerNo=" + planner.getPlannerNo();
     }
 
