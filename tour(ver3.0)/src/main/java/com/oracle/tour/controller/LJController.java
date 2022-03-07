@@ -115,7 +115,7 @@ public class LJController {
 
     
     /*
-     * 플래너 수정하기 .저장
+     * 플래너 수정페이지에서 저장 하는 로직
      * */
     @RequestMapping(value = "/plannerUpdate", method = RequestMethod.POST)
     @ResponseBody
@@ -174,7 +174,7 @@ public class LJController {
 
     
     /*
-     * 플래너 수정하기
+     * 플래너 수정하기 버튼클릭 planUpdate실행시..
      * */
     @RequestMapping("/goPlanU")
     public String goUpdatePage(PlannerDTO dto, Model model) throws Exception {
