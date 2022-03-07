@@ -249,13 +249,17 @@ public class LJPlanServiceImpl implements LJPlanService {
         for(int i=0;i<dates.size();i++){         // SimpleDateFormat 은 String -> Date 로 변환 해주는 메소드                   
             SimpleDateFormat recvSimpleFormat = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
             SimpleDateFormat tranSimpleFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
+            // String 형식을 Date형식으로 변환한다.
             Date dateDate = recvSimpleFormat.parse(dates.get(i));
+            // Date 값을 가져와서 String으로 변환한다.
             String stringDate = tranSimpleFormat.format(dateDate);
 
             String stringDay = stringDate + " " + times.get(i); // 이렇게 하는 이유 -> date 하나에 입력하능한 일정(time)은 최대 9개니까 
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
+            // String 형식을 Date형식으로 변환한다.
             Date dateDay = format.parse(stringDay);
+            // List에 저장 (for문이니까 dates의 길이 만큼 반복해서 List에 저장
             result.add(dateDay);
         }
 
