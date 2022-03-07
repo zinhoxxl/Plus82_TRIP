@@ -154,6 +154,7 @@ public class LJController {
         planService.deletePlans(dto.getPlannerNo());
         plannerService.deletePlanner(dto.getPlannerNo());
 
+        // URL을 지시된 주소로 바꾸고 해당 주소로 이동 : 플래너리스트로 dto에 저장된 id를 가지고 조회한 view를 보여줌 (즉, 삭제된 이후)
         return "redirect:/planL?id=" + dto.getId();
     }
 
