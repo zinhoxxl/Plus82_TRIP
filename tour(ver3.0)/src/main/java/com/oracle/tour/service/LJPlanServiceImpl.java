@@ -194,13 +194,13 @@ public class LJPlanServiceImpl implements LJPlanService {
         List<PlanDTO> origin_plans = selectPlan(plannerNo);
         List<Long> origin_planNo = new ArrayList<Long>();
 
-        for(PlanDTO plan : origin_plans){
-                origin_planNo.add(plan.getPlanNo());
+        for(PlanDTO plan : origin_plans){		// origin_plans(기존 plan들)을 PlanDTO plan에 저장
+                origin_planNo.add(plan.getPlanNo()); // plan(dto)에서 PlanNo를 origin_planNo에 저장
         }
 
         List<Long> update_planNo = new ArrayList<Long>();
 
-        for(PlanDTO plan : plans){
+        for(PlanDTO plan : plans){ // 존재하는 plan만큼 반복
             if(plan.getPlanNo() != null){       // 이미 저장된 plan이 아닌 새로 추가된 plan이라면 제외
                 update_planNo.add(plan.getPlanNo());
             }

@@ -136,8 +136,8 @@ public class LJController {
         List<Long> long_planNo = planService.changeLongList(planNo);
 
         List<PlanDTO> plans = planService.returnUpdatePlan(days, place, plan_intro, float_x, float_y, long_planNo, plannerDTO.getPlannerNo(), plannerDTO.getId());
-        planService.updatePlans(plans, planner.getPlannerNo());
-        planService.insertPlan(plans);
+        planService.updatePlans(plans, planner.getPlannerNo()); // 업데이트 된 플랜번호를 저장 처리 작업
+        planService.insertPlan(plans); // 업데이트 된 플랜내용을 저장 처리 작업
         logger.info("plans.size -> ", plans.size());
 
         return "planD?plannerNo=" + planner.getPlannerNo();
