@@ -52,7 +52,7 @@
 
                 // 일정추가하면 각배열에 추가하기
                 if(isValid == true){
-                    $('.planI-planbox').each(function (i){
+                    $('.planI-planbox').each(function (i){ // jQuery 에서 해당선택자로 js반복문 같이 사용하기
                         date.push($(this).attr("data-date"));
                     });
 
