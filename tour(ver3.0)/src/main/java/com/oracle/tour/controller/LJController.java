@@ -108,8 +108,10 @@ public class LJController {
         List<PlanDTO> plans = planService.returnPlan(days, place, plan_intro, float_x, float_y, plannerDTO.getPlannerNo(), plannerDTO.getId());
         planService.insertPlan(plans);
         logger.info("plans.size -> ", plans.size());
-        return "planL?id=" + dto.getId();
-    }
+        
+        // planL에 PlannerDTO에 저장된 id를 가지고 실행하여 지금 insert한 플래너를 바로 확인 가능하게 하기 위함.
+        return "planL?id=" + dto.getId(); 
+        }
 
     
     /*
