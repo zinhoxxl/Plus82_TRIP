@@ -246,13 +246,13 @@ public class LJPlanServiceImpl implements LJPlanService {
     public List<Date> changeDateList(List<String> dates, List<String> times) throws ParseException {
         List<Date> result = new ArrayList<Date>();
 
-        for(int i=0;i<dates.size();i++){
+        for(int i=0;i<dates.size();i++){                           
             SimpleDateFormat recvSimpleFormat = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
             SimpleDateFormat tranSimpleFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
             Date dateDate = recvSimpleFormat.parse(dates.get(i));
             String stringDate = tranSimpleFormat.format(dateDate);
 
-            String stringDay = stringDate + " " + times.get(i);
+            String stringDay = stringDate + " " + times.get(i); // 이렇게 하는 이유 -> date 하나에 입력하능한 일정(time)은 최대 9개니까 
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
             Date dateDay = format.parse(stringDay);
