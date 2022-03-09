@@ -22,7 +22,7 @@ public interface LJPlannerService {
         Planner entity = null;
 
         if(dto.getPlannerNo() != null){     // 플래너 수정할 경우 플래너 번호도 같이 전달
-            entity = Planner.builder()
+            entity = Planner.builder() // builder 패턴은 필요한 데이터만 생성 할 수 있다.
                     .plannerNo(dto.getPlannerNo())
                     .id(dto.getId())
                     .title(dto.getTitle())
