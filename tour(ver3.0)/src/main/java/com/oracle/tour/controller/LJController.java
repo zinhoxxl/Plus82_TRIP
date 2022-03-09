@@ -141,7 +141,7 @@ public class LJController {
         logger.info("plans.size -> ", plans.size());
 
         // update완료후 dto에서 plannerNo를 가지고 플랜상세페이지에서 view 띄우기
-        return "planD?plannerNo=" + planner.getPlannerNo(); 
+        return "planD?plannerNo=" + planner.getPlannerNo();  
     }
 
     
