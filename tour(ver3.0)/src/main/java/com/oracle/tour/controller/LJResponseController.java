@@ -41,7 +41,6 @@ public class LJResponseController {
 		Command com = new Command();
 		com.setC_no(Integer.parseInt(c_no));
 		com.setM_id(m_id);
-		;
 		com.setCom_contents(com_contents);
 		int result = ljs.WriteDetailCom(com);
 		String resultStr = Integer.toString(result);
