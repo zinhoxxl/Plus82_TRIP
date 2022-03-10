@@ -19,6 +19,8 @@ import com.oracle.tour.service.SHService;
  */
 
 @RestController
+// RestController : Controller + @ResponseBody => JSON 형태로 객체를 반환 하는 것이 목적
+// 최근에 데이터를 응답으로 제공하는 Restful API를 개발 할 때 주로 사용한다.
 public class LJResponseController {
 	
 	private LJService ljs;
