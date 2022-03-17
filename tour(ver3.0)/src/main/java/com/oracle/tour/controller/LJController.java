@@ -82,7 +82,7 @@ public class LJController {
         System.out.println("LJController planList planners.size() -> " + planners.size());
         System.out.println("LJController planList plans.size() -> " + plans.size());
 
-        return "/LJview/planList";
+        return "/LJview/planList"; 
     }
 
     
