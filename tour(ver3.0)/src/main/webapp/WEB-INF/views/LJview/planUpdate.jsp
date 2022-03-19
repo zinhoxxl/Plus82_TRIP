@@ -82,7 +82,7 @@
                         }
                     }
 
-                    $.ajax({ 
+                    $.ajax({  
                         url:"${pageContext.request.contextPath}/plannerUpdate?id=${sessionScope.m_id}&wDate=<fmt:formatDate value="${planner_user.getWDate()}" pattern="yyyy-MM-dd" />",
                         data:{  
                             date : date,
