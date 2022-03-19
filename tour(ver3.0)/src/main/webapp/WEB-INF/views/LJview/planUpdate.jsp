@@ -68,7 +68,7 @@
                     });
 
                     $('.planI-plandetail__input--time').each(function (i){
-                        time.push($(this).val());
+                        time.push($(this).val()); 
                     });
 
                     for(var i=0;i<time.length;i++){
